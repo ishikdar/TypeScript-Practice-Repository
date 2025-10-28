@@ -1,29 +1,35 @@
-// arrays
-var names = ["Alice", "Bob", "Charlie"];
-//so lets try to push sometihng different type
-//names.push(3); //this doesn't work.
-//now if i try to replace something in different type
-//names[0]=3; //this also doesn't work
-//so to make it work we can use mixed types
-var mixed = ["Alice", 25, true];
-mixed.push("Bob");
-mixed.push(30);
-mixed.push(false);
-//replace value inside mixed array
-mixed[0] = "Charlie";
-//so lets print the mixed array
+//explicit types
+var character;
+var age;
+var isLoggedIn;
+//age = 'luigi' // error
+age = 30;
+//character = 20; // error
+character = 'mario';
+//isLoggedIn = 25; // error
+isLoggedIn = true;
+//arrays
+var ninjas = [];
+ninjas.push('shaun');
+//ninjas.push(20); // error
+//union types
+var mixed = [];
+mixed.push('hello');
+mixed.push(20);
+//mixed.push(false); // error
 console.log(mixed);
-//this works fine
+var uid;
+uid = '123';
+uid = 123;
+//uid = false; // error
 //objects
-var person = {
-    name: "Alice",
-    age: 25,
-    isStudent: true
-};
-// lets change a property value 
-person.name = "Bob";
-person.age = 30;
-//now if i try to assign different type to a property
-//person.age = "thirty"; //this doesn't work
-//now lets print the object
-console.log(person);
+// this is generic object type
+var ninjaOne;
+ninjaOne = { name: 'yoshi', age: 30 };
+//ninjaOne = 'hello'; // error
+//ninjaOne = 20; // error
+// this is specific object type
+var ninjaTwo;
+ninjaTwo = { name: 'mario', age: 20, beltColor: 'black' };
+//ninjaTwo = { name: 'mario', age: 20 }; // error
+//ninjaTwo = { name: 'mario', age: '20', beltColor: 'black' }; // error
