@@ -1,1 +1,2 @@
-var itemLIST = "NOTHING";
+var itemList = "NOTHING";
+console.log(itemList);
