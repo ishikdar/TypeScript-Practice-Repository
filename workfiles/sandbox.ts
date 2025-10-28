@@ -1,21 +1,42 @@
-// Declare variables with types
-let character: string = 'mario';
-let age: number = 30;
-let isBlackBelt: boolean = false;
+// arrays
 
-// You can still reassign values, but only of the same type
-character = 'luigi';     // ✅ string
-// character = 20;       // ❌ Error: Type 'number' is not assignable to type 'string'
+let names = ["Alice", "Bob", "Charlie"];
 
-age = 40;                // ✅ number
-// age = 'yoshi';        // ❌ Error: Type 'string' is not assignable to type 'number'
+//so lets try to push sometihng different type
+//names.push(3); //this doesn't work.
 
-isBlackBelt = true;      // ✅ boolean
-// isBlackBelt = 'yes';  // ❌ Error: Type 'string' is not assignable to type 'boolean'
+//now if i try to replace something in different type
+//names[0]=3; //this also doesn't work
 
-// Function with a parameter type and return type
-const circ = (diameter: number): number => {
-  return diameter * Math.PI;
+//so to make it work we can use mixed types
+
+let mixed = ["Alice", 25, true];
+
+mixed.push("Bob");
+mixed.push(30);
+mixed.push(false);
+
+//replace value inside mixed array
+mixed[0] = "Charlie";
+
+//so lets print the mixed array
+console.log(mixed);
+//this works fine
+
+
+//objects
+let person = {
+    name: "Alice",
+    age: 25,
+    isStudent: true
 };
 
-console.log(circ(7.5)); // ✅ works fine
+// lets change a property value 
+person.name = "Bob";
+person.age = 30;
+
+//now if i try to assign different type to a property
+//person.age = "thirty"; //this doesn't work
+
+//now lets print the object
+console.log(person);
